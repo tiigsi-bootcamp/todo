@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo App</title>
+
+	<link rel="stylesheet" href="tailwind.min.css">
+</head>
+
+<body class="bg-gray-800 text-white">
+	<div class="max-w-lg mt-3 py-6 bg-gray-600 mx-auto rounded-lg shadow-lg">
+		<div class="flex justify-center items-center">
+			<h1 class="text-4xl">My Todo App</h1>
+		</div>
+		<hr class="my-4">
+
+		<div class="px-5 py-8 flex flex-col space-y-2">
+			<div class="flex justify-between items-center">
+				<h4>Todo 1</h4>
+				<button class="bg-green-500 p-2 rounded-lg">Done</button>
+			</div>
+			<div class="flex justify-between items-center">
+				<h4>Todo Item 2</h4>
+				<button class="bg-green-500 p-2 rounded-lg">Done</button>
+			</div>
+			<div class="flex justify-between items-center">
+				<h4>Todo Item 3</h4>
+				<button class="bg-green-500 p-2 rounded-lg">Done</button>
+			</div>
+		</div>
+
+		<hr class="my-4">
+
+		<div class="px-5 flex gap-x-2">
+			<input type="text" class="flex-1 py-2 px-4 text-gray-700 rounded-lg">
+			<button class="bg-yellow-500 p-2 rounded-lg shadow-lg">Add</button>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
