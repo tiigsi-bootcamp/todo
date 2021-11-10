@@ -3,6 +3,8 @@
 function addTodo() {
 	const inputElement = document.querySelector('input');
 	const value = inputElement.value;
+	
+	if (value === "") return;
 
 	const todoContainer = document.createElement('div');
 	todoContainer.className = 'flex justify-between items-center';
