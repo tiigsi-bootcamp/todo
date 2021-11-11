@@ -33,3 +33,18 @@ function markAsDone(event) {
 	const todoItem = clickedButton.previousElementSibling;
 	todoItem.classList.add('line-through');
 }
+//Maybe there is some bug , because i can't debugg it i'm in the sky remember 😁
+//Instead of onclick event , see the magic of addEventListener
+const allDoneButtons =document.querySelector('.alldone_parent');
+
+allDoneButtons.addEventListener('click',function(e){
+	const individualButton = e.target.closest('.bg-green-500');
+
+	individualButton.className = 'hidden'
+
+	const findingchildH4 = individualButton.previousElementSibling;
+	findingchildH2.className = "line-through";
+
+	//Removing the div container of the buttons
+	// const removeParentOfTheButtons = individualButton.parentElement.remove();
+})
