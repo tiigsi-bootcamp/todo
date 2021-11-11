@@ -40,11 +40,18 @@ const allDoneButtons =document.querySelector('.alldone_parent');
 allDoneButtons.addEventListener('click',function(e){
 	const individualButton = e.target.closest('.bg-green-500');
 
-	individualButton.className = 'hidden'
+	//you have to add this otherwise you will get an error
+	if(!individualButton) return
+
+	individualButton.className = 'bg-red-500 p-2 rounded-lg'
 
 	const findingchildH4 = individualButton.previousElementSibling;
 	findingchildH2.className = "line-through";
 
+	//After the button comes red we can listen and delete the whole div
+	individualButton.addEventListener('click',function(e){
+    e.target.parentElement.remove();
+	})
 	//Removing the div container of the buttons
 	// const removeParentOfTheButtons = individualButton.parentElement.remove();
 })
