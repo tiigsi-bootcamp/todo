@@ -28,8 +28,11 @@ function addTodo() {
 
 function markAsDone(event) {
 	const clickedButton = event.target;
-	clickedButton.classList.add('hidden');
+	// clickedButton.classList.add('hidden');
 
 	const todoItem = clickedButton.previousElementSibling;
 	todoItem.classList.add('line-through');
+	clickedButton.textContent = 'Remove';
+	clickedButton.className = 'bg-red-500 p-2 rounded-lg';
+	clickedButton.addEventListener('click', () => event.target.parentElement.remove());
 }
